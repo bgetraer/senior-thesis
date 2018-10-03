@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+% packages that I call bc they are in the template I have and I don't know if I want them or not.
+\widowpenalty=10000 
+\clubpenalty=10000 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{longtable}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+\setlength{\LTcapwidth}{5.5 in}
+\usepackage{url}
+\usepackage{lastpage}
+\usepackage{lineno}
+\usepackage[english]{babel}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[round, sort, numbers, authoryear]{natbib}
+\usepackage{hyperref}
+\usepackage{gensymb}
+\hypersetup{colorlinks,%
+citecolor=black,%
+filecolor=black,%
+linkcolor=Mahogany,%
+urlcolor=MidnightBlue,%
+pdftex}
+
+% header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+ \rhead {\emph{\textcolor{blue}{bgetraer}, \thepage ~of
+     \pageref{LastPage}}}
+ \lhead{\footnotesize \textsc{GEO$/$Proposal for Junior Paper}}
+ \cfoot{}
+ \renewcommand{\headrulewidth}{0.4pt} 
+
+% margins and linespacing
+\textwidth = 6.5 in
+\textheight = 8.84 in
+\addtolength{\voffset}{-0.04in} 
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin =  0.0 in
+\headheight = 0.1 in
+\headwidth = 6.5 in
+\headsep = 0.25 in
+\parskip = 0.1 in
+\parindent = 0.0 in
+\linespread{1.25}
+
+% define new commands for text that occur frequently
+\newcommand{\MT}{^{\mathrm{MT}}}
+\newcommand{\ga}{\gtrsim}
+\newcommand{\Lpot}{(L+1)^2}
+\newcommand{\WS}{^{\mathrm{WS}}}
+
+% frontmatter 
+\title{Spatial Localization of Greenland Mass Wasting Using a 2-D Wavelet Decomposition of GRACE Data and Comparison to Physical Drivers of Ice Loss}
+\author{Benjamin Getraer}
+
+\begin{document}
+% Add line numbers
+%\linenumbers
+
+\maketitle
+
+\begin{abstract}
+Melting ice from the Greenland Ice-Sheet has accounted for an increasing percentage --- now estimated at over $25\%$, or --- of rising global mean sea-level since the early 1990s. As recently as 2016, gravimetric and altimetric studies of Greenland melting rates found  increasing rates of ice loss, which have not been borne out in GRACE gravimetric observations over the last few years (2015--2017). We hypothesize that the true trend of Greenland ice loss between 2003--2017 is linear, and that deviations from the linear trend may be explained by inter-annual variability in climate. We demonstrate a novel application of 2-dimensional discrete wavelet analysis to the GRACE dataset to recover spatial structure of inter-annual variability in ice loss, focusing on the unusual melt and accumulation seasons of 2012--2014. Finally, we compare our interpretation of the 2012--2014 anomaly in spatial scale and location to the results of others using independent atmospheric, altimetric, and meteorologic data sources. \\[3em]
+
+% see Mattingly for percentages
+\textbf{Key Points:}
+\begin{enumerate}
+	\item We focus on inter-annual variability of the Greenland ice loss trend.
+	\item We analyze the spatial structure of subregional signals in the GRACE dataset using discrete wavelet transforms.
+	\item We define the 2012--2014 anomaly in spatial structure from the gravitational field.
+\end{enumerate}
+
+\textbf{Key Points:}
+\begin{enumerate}
+	\item 
+	\item 
+	\item 
+\end{enumerate}
+\end{abstract}
+
+\section{Introduction \label{sec:introduction}}
+
+
+
+\subsection{Previous Results \label{sec:prevresults}}
+
+\section{Objectives and Methods \label{sec:methods}} 
+
+\section{Budget Justification \label{sec:budget}}
+
+All data, code, sources, and software that will be used are either
+publicly available for free or already made available under licensing
+from Princeton University at no additional expense. The entirety of
+this project will be in data analysis and computer modeling, and no
+travel, data, or consumable supplies costs are anticipated.
+ 
+\section{Acknowledgements \label{sec:ack}}
+
+Thank you to my Senior Thesis adviser Professor Laure Resplandy for your ideas, enthusiasm, and guidance. Thank you to my Junior Paper adviser Professor Frederik J.~Simons whose patience and passion gave me the tools and confidence to pursue my interests and contributed greatly in the conceptualization and direction of this project. Thank you to the second reader of my Fall Junior Paper, Prof.~Jessica Irving for feedback, suggestions, and encouragement. Thanks to Dr.~Amanda
+Irwin Wilkins and ``The Hare'' writing workshop group for discussing
+and editing various figures and drafts. Thank you to Prof.~Adam C.~Maloof who taught me \LaTeX, and to Dr.~Chris Harig for providing some of the data files. Thank you to Prof.~Gabriel Vecchi for insight into atmospheric and oceanic processes. Thank you to Jean Getraer, Andrew Getraer, Jonathan Feld, Rae Perez, and Zach Smart for proof-reading various drafts of my Junior year work.  Lastly, thank you to the numerous professors and graduate students in the Princeton Department of Geosciences and at Princeton Research Day for feedback, encouragement, and constructive criticism on the presentation of preliminary results.
+
+% References
+\small
+\renewcommand{\bibsep}{0em}
+\renewcommand{\bibname}{References}
+\bibliographystyle{LatexFiles/gji}
+\bibliography{LatexFiles/JP01}
+
+\end{document}
