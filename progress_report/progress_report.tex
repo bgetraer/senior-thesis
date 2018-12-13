@@ -1,0 +1,169 @@
+\documentclass[11pt]{report}
+\clubpenalty=10000
+\widowpenalty=10000
+
+% input packages that I call bc they are in the template and I might want them.
+\input{/Users/benjamingetraer/Documents/IndependentWork/LatexFiles/packages}
+
+% It is handy to define new commands for text that occurs frequently (see Discussion)
+\newcommand{\MT}{^{\mathrm{MT}}}
+\newcommand{\ga}{\gtrsim}
+\newcommand{\Lpot}{(L+1)^2}
+\newcommand{\WS}{^{\mathrm{WS}}}
+
+%--Format the section headers
+
+% FJS Changed this... I didn't like the numbering or the
+% indentation... so I introduced a fake chapter Main Text. 
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{5}
+
+%--set the page formatting--
+\geometry{hmargin={1.6in,1.1in},vmargin={1.5in,1.2in}}
+\doublespacing
+
+%***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+\begin{document}
+%--front matter needs roman pagination--
+\pagenumbering{roman}
+
+%--Title Page--
+\input{Frontmatter/titlepage}
+
+%--Copyright Page--
+\thispagestyle{empty}
+\vspace*{3in}
+\begin{center}
+\emph{This paper represents my own work in accordance with University regulations,} \\
+Benjamin Getraer %%Sign here
+\end{center}
+\clearpage
+
+%--Abstract--  
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{center}
+\Large \textbf{Abstract}
+\end{center}
+ \input{Frontmatter/abstract}
+ \clearpage
+
+%--Acknowledgements--  
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\begin{center}
+\Large \textbf{Acknowledgements}
+\end{center}
+\input{Frontmatter/acknowledgements}
+\clearpage
+
+%--Table of Contents--  
+\thispagestyle{empty}
+\tableofcontents
+\clearpage
+
+\listoffigures
+\listoftables
+\clearpage
+
+%--Set up fancy header-- 
+\fancyhead{}
+\fancyfoot{}
+\pagestyle{fancyplain}
+\rhead{\fancyplain{\thepage}{\noindent \textsc{\rightmark} \hfill \thepage~of~\pageref{LastPage}}}
+\rfoot{\hrule \today \hfill Benjamin Getraer}
+\pagenumbering{arabic}
+
+%--Reset the page numbers and set them to arabic-- 
+{\newpage\renewcommand{\thepage}{\arabic{page}}\setcounter{page}{1}}
+
+%--Have sections but use chapter counters
+\addcontentsline{toc}{chapter}{Main Text}
+
+\section{Introduction \label{sec:introduction}}
+
+Average global surface temperature is rising at an increasing rate --- approximately $0.09\degree$~C per decade since 1880, and approximately $0.26\degree$~C per decade since 1979 \cite[][]{ipcc2013_atmosphere}
+--- and has contributed to significant melting of the
+Greenland ice sheet, with recent ice loss approximated at $-244$~Gt per
+year \cite[][]{Harig+2015a,Harig+2016}. The Greenland Ice Sheet covers just over 1\% of
+Earth's surface, and, if completely melted, would raise sea level by over $7$~m
+\cite[][]{ipcc2013_cryosphere}.
+Massive loss of ice has
+significant repercussions for human civilization, bringing with it a rising sea
+level at about $1$--$2$~mm per year at the end of 2010
+\cite[][]{ipcc2013_sealevel}.  Our broad goal is to understand deviations from modeled rates of Greenland ice melt in order to better understand, predict, and
+communicate the changing conditions of the planet.
+
+
+\begin{figure}[h!]
+\centering
+\makebox[\textwidth][c]{\includegraphics[height=0.37\textheight]
+{Figures/HarigGetraerTrend.pdf}}
+\caption[Greenland Mass Trend: 2003--2017]{Total mass changes for Greenland over the complete GRACE record using equivalent methods to \cite{Harig+2016}. Shown in \textbf{A} are the $\underline{m}_1$ (linear) and $\underline{m}_2$ (quadratic) models for 01/2003--06/2013, comparable to previous estimates of the mass trend \citep{Harig+2016}. Note the significant departure of the extrapolated $\underline{m}_2$ model from the continuing signal. Shown in \textbf{B} is the $\underline{m}_1$ linear model for 01/2003--06/2017 with the standard of deviation of its residuals. Note that the $\underline{m}_1$ model does not significantly change after including the entire GRACE record. Error bars represent $2\sigma$ based on the combined variance of modeled Slepian coefficients $f_{\alpha}$ (see \cite{Harig+2016}, as well as \cite{getraerFall,getraerSpring}). This figure appeared in \cite{getraerFall,getraerSpring}, here with minor updates.} \label{fig:Getraer}
+\end{figure}
+
+Ice mass of the Greenland Ice Sheet has been calculated using
+gravimetric data from NASA's Gravity
+Recovery and Climate Experiment (GRACE), as well as satellite and airplane based
+altimetry, finding decreasing rates in the ice mass signal over the last
+decade \cite[][]{khan2015,Harig+2016}. Rates of ice loss increase by a
+combination of greater discharge from calving glacier termini at the edges of
+the ice-sheet and decreased surface mass-balance, the difference between
+seasonal snow accumulation and melting \cite[][]{khan2015,enderlin2014}.
+Significant inter-annual variability and asynchronicity has been observed in
+the discharge rates of the Greenland Ice Sheet's major drainage basins, while
+surface mass-balance is comparatively more predictable
+\cite[][]{mcmillan2016,enderlin2014}. Both contributions to ice loss accelerated between 2000--2012, combining for a total acceleration of ice mass
+estimated around $-30$~Gt per year$^2$ over all of Greenland
+\cite[][]{velicogna2009,enderlin2014}.
+
+\begin{wrapfigure}{r}{0.5\textwidth} 
+%\vspace{-50pt}
+\includegraphics[width=1.1\linewidth]{Figures/thegrid.pdf}
+\caption[The Discrete Grid Around Greenland]{A grid around Greenland is defined in the global basis on a face of the Cubed Sphere centered on Greenland on which the GRACE spherical harmonic data are solved. In the image basis the grid is cartesian with length $256$. Grid lines in the image basis represent the diminishing spatial support of wavelets of different levels, from $\zeta=8$ (the entire image) to $\zeta=1$ (a unit grid cell). Note that in reality, each wavelet level has coverage over the entire image. The dotted line around Greenland is a coastal buffer of $0.5^{\circ}$ as in \cite{Harig+2016}. This Figure appeared in my Spring JP.} \label{fig:thegrid}
+%\vspace{-50pt}
+\end{wrapfigure}
+
+A study by \cite{Harig+2016} modeling the mass of the Greenland Ice Sheet
+using GRACE data products showed deviations from the long-term quadratic
+trend, starting with a high level of melt in the summer of 2012, and followed by two
+summers of little melting in 2013 and 2014 \cite[see
+Figure~\ref{fig:Getraer} A, comparable to][their
+Figure~4]{Harig+2016}. Our analysis of the complete GRACE data set (2002--2017) using identical methods showed a linear,
+not accelerating, trend of ice loss for the Greenland Ice Sheet, constraining the observed unexpected deviations to an unusually large melt summer of 2012 followed by a summer of unusually little melt in 2013 (see
+Figure~\ref{fig:Getraer} B). 
+
+
+
+The anomalous seasons of 2012--2013 have received attention in recent literature by studies attempting to understand how surface mass balance processes could produce such inter-annual variability. Explanations and correlations have been found relationships with climate indices such as the phase of the North Atlantic Oscillation \cite[][as well as my Fall 2017 JP]{mcmillan2016,bevis2018}, transient atmospheric transport of water vapor in so-called "atmospheric rivers" \citep{mattingly2018}, and non-radiative energy flux caused by short-term cloud cover \citep{solomon2017}. 
+
+\subsection{Previous Results \label{sec:prevresults}}
+In my Spring 2018 JP, I explored the use of a 2-D wavelet basis to represent the GRACE gravimetric data over Greenland such that meaningfully contributing basis functions also contained information about spatial structure (see
+Figure~\ref{fig:thegrid}). 
+
+I developed a procedure for choosing the most important wavelet basis functions in order to extract the true fluctuation of the signal from the over-determined image calculated from the typical GRACE spherical harmonic basis. I then tested which wavelet basis function best captured the 2012--2013 deviation from the expected signal, finding the deviations to be concentrated in southwestern Greenland (see
+Figure~\ref{fig:deviant}). 
+
+
+
+\begin{wrapfigure}{r}{0.5\textwidth} 
+%\centering
+%\makebox[\textwidth][c]{
+\includegraphics[width=\linewidth]{Figures/deviant.pdf}
+%}
+\caption[Location of the 2012--2014 Deviation]{The 2012--2014 deviation in Greenland mass and the total from the reconstructed modeled wavelet coefficients. By adding in the real values of only four wavelet coefficients back into the modeled wavelet reconstruction we improve the variance explanation by $15\%$. These wavelets are shown inset, weighted by their values in September 2012, the extreme of the deviation, and are concentrated in southwestern Greenland. ``m$_{\zeta\gamma}$'' refers to a wavelet basis function ``m'' of index $\gamma$ in level $\zeta$. This Figure appeared in my Spring JP.
+\label{fig:deviant}}
+\end{wrapfigure}
+
+
+%--References
+\small
+\renewcommand{\bibsep}{0em}
+
+\renewcommand{\bibname}{References}
+\bibliographystyle{/Users/benjamingetraer/Documents/IndependentWork/LatexFiles/gji.bst}
+\bibliography{/Users/benjamingetraer/Documents/IndependentWork/LatexFiles/bgetraerBib.bib}
+
+
+
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass [11pt]{article}
+\widowpenalty=10000 
+\clubpenalty=10000 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{longtable}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+\setlength{\LTcapwidth}{5.5 in}
+\usepackage{url}
+\usepackage{lastpage}
+\usepackage{lineno}
+\usepackage[english]{babel}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[round, sort, numbers, authoryear]{natbib}
+\usepackage{hyperref}
+%\usepackage{soul}
+\usepackage{csquotes}
+\usepackage{bibentry}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\nobibliography*
+
+% Now setup margins and linespacing
+\textwidth = 6.5 in
+\textheight = 8.84 in
+\addtolength{\voffset}{-0.04in} 
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin =  0.0 in
+\headheight = 0.1 in
+\headwidth = 6.5 in
+\headsep = 0.25 in
+\parskip = 0.1 in
+\parindent = 0.3 in
+\linespread{1.25}
+
+
+\newcommand{\entry}[2]{\hl{\cite{#1}}\\\\ \indent\indent #2}
+
+\newcommand{\hl}[1]{\colorbox{yellow}{\textcolor{red}{#1}}}
+
+
+\title{Annotated Bibliography}
+\author{Benjamin Getraer\\Princeton University}
+
+\begin{document}
+\maketitle
+
+\entry{mattingly2018}{Detailed analyses of Atmospheric River impacts partitioned by season, area of intersection with Greenland Ice Sheet, and strength of moisture transport. Self-Organizing Map classification and conventional object-based Atmospheric River identification algorithm to identify moisture transport events.
+
+Data: 
+\begin{enumerate}
+\item ``integrated vapor transport'' data from MERRA-2 atmospheric reanalysis dataset, 1980--2016.
+\item MAR 3.8 climate model (total melt, snowfall, surface mass balance, surface temperature).
+\item National Snow and Ice Center MEaSUREs Greenland surface melt daily dataset, 1979--2015.
+\end{enumerate}
+
+Results:
+\begin{enumerate}
+\item AR in different locations associated with different NAO phases.
+\item Change in AR locations between 2000--2009, 2010--2012, 2013--2016.
+\item Different effects depending on W vs E AR.
+\end{enumerate}
+Discussion:
+\begin{enumerate}
+\item Relation to NAO, blocking, extratropical cyclones, Rossby wave breaking.
+\item Uncertain relation to cloud cover per se.
+\end{enumerate}
+}
+
+\entry{mattingly2018}
+
+
+\bibliographystyle{/Users/benjamingetraer/Documents/IndependentWork/LatexFiles/gji}
+\bibliography{/Users/benjamingetraer/Documents/IndependentWork/LatexFiles/bgetraerBib}
+\end{document}
