@@ -116,12 +116,12 @@ surface mass-balance is comparatively more predictable
 estimated around $-30$~Gt per year$^2$ over all of Greenland
 \cite[][]{velicogna2009,enderlin2014}.
 
-\begin{wrapfigure}{r}{0.5\textwidth} 
-%\vspace{-50pt}
-\includegraphics[width=1.1\linewidth]{Figures/thegrid.pdf}
-\caption[The Discrete Grid Around Greenland]{A grid around Greenland is defined in the global basis on a face of the Cubed Sphere centered on Greenland on which the GRACE spherical harmonic data are solved. In the image basis the grid is cartesian with length $256$. Grid lines in the image basis represent the diminishing spatial support of wavelets of different levels, from $\zeta=8$ (the entire image) to $\zeta=1$ (a unit grid cell). Note that in reality, each wavelet level has coverage over the entire image. The dotted line around Greenland is a coastal buffer of $0.5^{\circ}$ as in \cite{Harig+2016}. This Figure appeared in my Spring JP.} \label{fig:thegrid}
-%\vspace{-50pt}
-\end{wrapfigure}
+\begin{figure}[h!]
+\centering
+\makebox[\textwidth][c]{\includegraphics[height=0.5\textheight]
+{Figures/jetstream.pdf}}
+\caption[Atmospheric Circulation Around Greenland]{Example of atmospheric conditions at the $250$~hPa isobar over the North Atlantic preceding record Greenland Ice Sheet surface melt, 07/09/2012 (from MERRA-2 reanalyzed data). Isobar height contours are labeled in $10^4$~m, and wind vectors are shown by arrows. Note the location of the northern polar jet stream, dividing the low and high isobar heights around the $1.05\times 10^{4}$~m contour. The temporary North Atlantic Rossby wave is labeled as the ``HI'' pressure anti-cyclone moving north towards southern Greenland, with a complementary ``LO'' pressure cyclone centered over Labrador. Note that the jet stream is deflected through the Labrador Sea and Baffin Bay, along the West Coast of Greenland. As a result of these conditions, the ``LO'' pressure over Reykjav\'ik is pushed north, and the pressure difference between Reykjav\'ik  and Azores is lowered, resulting in an negative NAO index (top left).} \label{fig:jetstream}
+\end{figure}
 
 A study by \cite{Harig+2016} modeling the mass of the Greenland Ice Sheet
 using GRACE data products showed deviations from the long-term quadratic
@@ -133,10 +133,39 @@ not accelerating, trend of ice loss for the Greenland Ice Sheet, constraining th
 Figure~\ref{fig:Getraer} B). 
 
 
+The anomalous seasons of 2012--2013 have received attention in recent literature by studies attempting to understand how surface mass balance processes could produce such inter-annual variability. Explanations and correlations have been found relationships with climate indices such as the phase of the North Atlantic Oscillation (NAO) \cite[][]{mcmillan2016,bevis2018,getraerFall}, transient atmospheric transport of warm air and water vapor in so-called "atmospheric rivers" \citep{mattingly2018}, and non-radiative energy flux caused by short-term cloud cover \citep{solomon2017}. 
 
-The anomalous seasons of 2012--2013 have received attention in recent literature by studies attempting to understand how surface mass balance processes could produce such inter-annual variability. Explanations and correlations have been found relationships with climate indices such as the phase of the North Atlantic Oscillation \cite[][as well as my Fall 2017 JP]{mcmillan2016,bevis2018}, transient atmospheric transport of water vapor in so-called "atmospheric rivers" \citep{mattingly2018}, and non-radiative energy flux caused by short-term cloud cover \citep{solomon2017}. 
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\vspace{-20pt}
+\includegraphics[width=1.1\linewidth]{Figures/thegrid.pdf}
+\caption[The Discrete Grid Around Greenland]{A grid is defined in the global basis on a face of the Cubed Sphere centered on Greenland, upon which the gravitational anomaly is evaluated from the GRACE spherical harmonic solutions. In the image basis the grid is cartesian with length $256$. Grid lines in the image basis represent the diminishing spatial support of wavelets of different levels, from $\zeta=8$ (the entire image) to $\zeta=1$ (a unit grid cell). Note that in reality, each wavelet level has coverage over the entire image. The dotted line around Greenland is a coastal buffer of $0.5^{\circ}$ as in \cite{Harig+2016}. This Figure appeared in my Spring JP.} \label{fig:thegrid}
+%\vspace{-50pt}
+\end{wrapfigure}
+
+The atmospheric circulation affecting the Greenland Ice Sheet is broadly controlled by the position of the polar jet stream in the northern hemisphere \cite[][]{hanna2013,mattingly2018}. Specifically, strong summer melt events often occur with a negative NAO index and high pressure ``blocking'' over southern Greenland, advecting warm moist air into the Arctic along the west coast of Greenland \cite[][]{hanna2013,mattingly2018,mcmillan2016,bevis2018,getraerFall}. The NAO index broadly represents the difference in atmospheric pressure between the typically cold, low-pressure Arctic air near Reykjav\'ik, Iceland, and the typically warm, high-pressure air near Azores, Portugal, divided by the location of the polar jet stream (see Figure~\ref{fig:jetstream}). When the Azores high-pressure system pushes the jet stream northward, the pressure difference across the North Atlantic is weaker, producing a negative NAO index (Figure~\ref{fig:jetstream}). This temporary high-pressure excursion into the arctic is known as a Rossby wave and is accompanied by complementary low-pressure cyclones which develop on either side of the high-pressure block, the combined flow from which advects warm air into the Arctic until the Rossby wave ``breaks'' and the jet stream return to its typical location. These atmospheric conditions are illustrated in Figure~\ref{fig:jetstream}, illustrating the Greenland blocking event in July 2012, immediately preceding record surface melting on the Greenland Ice Sheet on 07/11/2012 \cite[][]{hanna2013,mattingly2018}.
+
+
+
+
+
+The general conclusions drawn by these studies point to common atmospheric processes of uncommon duration or intensity. 
+
+
+
+
 
 \subsection{Previous Results \label{sec:prevresults}}
+
+\begin{wrapfigure}{r}{0.5\textwidth} 
+\vspace{-50pt}
+%\centering
+%\makebox[\textwidth][c]{
+\includegraphics[width=\linewidth]{Figures/deviant.pdf}
+%}
+\caption[Location of the 2012--2014 Deviation]{The 2012--2014 deviation in Greenland mass and the total from the reconstructed modeled wavelet coefficients. By adding in the real values of only four wavelet coefficients back into the modeled wavelet reconstruction we improve the variance explanation by $15\%$. These wavelets are shown inset, weighted by their values in September 2012, the extreme of the deviation, and are concentrated in southwestern Greenland. ``m$_{\zeta\gamma}$'' refers to a wavelet basis function ``m'' of index $\gamma$ in level $\zeta$. This Figure appeared in my Spring JP.
+\label{fig:deviant}}
+\end{wrapfigure}
+
 In my Spring 2018 JP, I explored the use of a 2-D wavelet basis to represent the GRACE gravimetric data over Greenland such that meaningfully contributing basis functions also contained information about spatial structure (see
 Figure~\ref{fig:thegrid}). 
 
@@ -145,14 +174,23 @@ Figure~\ref{fig:deviant}).
 
 
 
-\begin{wrapfigure}{r}{0.5\textwidth} 
-%\centering
-%\makebox[\textwidth][c]{
-\includegraphics[width=\linewidth]{Figures/deviant.pdf}
-%}
-\caption[Location of the 2012--2014 Deviation]{The 2012--2014 deviation in Greenland mass and the total from the reconstructed modeled wavelet coefficients. By adding in the real values of only four wavelet coefficients back into the modeled wavelet reconstruction we improve the variance explanation by $15\%$. These wavelets are shown inset, weighted by their values in September 2012, the extreme of the deviation, and are concentrated in southwestern Greenland. ``m$_{\zeta\gamma}$'' refers to a wavelet basis function ``m'' of index $\gamma$ in level $\zeta$. This Figure appeared in my Spring JP.
-\label{fig:deviant}}
-\end{wrapfigure}
+
+
+
+\section{Next steps}
+
+\begin{enumerate}
+\item get updated GRACE RL06 data
+\item quantitative image to image comparison of moisture transport and mass loss
+\item calculate mass loss on a sub basin spatial level across Greenland and compare to other estimates
+\item test wavelet results using different bases
+\end{enumerate}
+
+The NAO index is unitless, and represents the relative magnitude of the 500mb pressure difference between Azores and Reykjav\'ik compared to the 1950--2000 monthly mean.
+
+%http://www.cpc.ncep.noaa.gov/products/precip/CWlink/pna/nao_loading.html
+
+\input{Endmatter/datasources}
 
 
 %--References
