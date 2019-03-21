@@ -101,11 +101,10 @@ communicate the changing conditions of the planet.
 \caption[Greenland Mass Trend: 2003--2017]{Total mass changes for Greenland over the complete GRACE record using equivalent methods to \cite{Harig+2016}. Shown in \textbf{A} are the $\underline{m}_1$ (linear) and $\underline{m}_2$ (quadratic) models for 01/2003--06/2013, comparable to previous estimates of the mass trend \citep{Harig+2016}. Note the significant departure of the extrapolated $\underline{m}_2$ model from the continuing signal. Shown in \textbf{B} is the $\underline{m}_1$ linear model for 01/2003--06/2017 with the standard of deviation of its residuals. Note that the $\underline{m}_1$ model does not significantly change after including the entire GRACE record. Error bars represent $2\sigma$ based on the combined variance of modeled Slepian coefficients $f_{\alpha}$ (see \cite{Harig+2016}, as well as \cite{getraerFall,getraerSpring}). This figure appeared in \cite{getraerFall,getraerSpring}, here with minor updates.} \label{fig:Getraer}
 \end{figure}
 
-Ice mass of the Greenland Ice Sheet has been calculated using
-gravimetric data from NASA's Gravity
-Recovery and Climate Experiment (GRACE), as well as satellite and airplane based
-altimetry, finding decreasing rates in the ice mass signal over the last
-decade \cite[][]{khan2015,Harig+2016}. Rates of ice loss increase by a
+Ice loss on the Greenland Ice Sheet has been observed in
+gravitational measurements from NASA's Gravity
+Recovery and Climate Experiment (GRACE), satellite and airplane based
+altimetry, and energy balance models, finding acceleration of melt in the ice mass signal over most of the last two decades \cite[][]{khan2015,Harig+2016}. Rates of ice loss increase by a
 combination of greater discharge from calving glacier termini at the edges of
 the ice-sheet and decreased surface mass-balance, the difference between
 seasonal snow accumulation and melting \cite[][]{khan2015,enderlin2014}.
@@ -116,7 +115,7 @@ surface mass-balance is comparatively more predictable
 estimated around $-30$~Gt per year$^2$ over all of Greenland
 \cite[][]{velicogna2009,enderlin2014}.
 
-\begin{figure}[h!]
+\begin{figure}[h]
 \centering
 \makebox[\textwidth][c]{\includegraphics[height=0.5\textheight]
 {Figures/jetstream.pdf}}
@@ -124,7 +123,7 @@ estimated around $-30$~Gt per year$^2$ over all of Greenland
 \end{figure}
 
 A study by \cite{Harig+2016} modeling the mass of the Greenland Ice Sheet
-using GRACE data products showed deviations from the long-term quadratic
+using GRACE data products showed deviations from the long-term accelerating
 trend, starting with a high level of melt in the summer of 2012, and followed by two
 summers of little melting in 2013 and 2014 \cite[see
 Figure~\ref{fig:Getraer} A, comparable to][their
@@ -133,10 +132,10 @@ not accelerating, trend of ice loss for the Greenland Ice Sheet, constraining th
 Figure~\ref{fig:Getraer} B). 
 
 
-The anomalous seasons of 2012--2013 have received attention in recent literature by studies attempting to understand how surface mass balance processes could produce such inter-annual variability. Explanations and correlations have been found relationships with climate indices such as the phase of the North Atlantic Oscillation (NAO) \cite[][]{mcmillan2016,bevis2018,getraerFall}, transient atmospheric transport of warm air and water vapor in so-called "atmospheric rivers" \citep{mattingly2018}, and non-radiative energy flux caused by short-term cloud cover \citep{solomon2017}. 
+The anomalous seasons of 2012--2013 have received attention in recent literature by studies attempting to understand how surface mass balance processes produce such inter-annual variability. Correlations have been found with climate indices such as the phase of the North Atlantic Oscillation (NAO) \cite[][]{mcmillan2016,bevis2018,getraerFall}, transient atmospheric transport of warm air and water vapor in so-called "atmospheric rivers" \citep{mattingly2018}, and non-radiative energy flux enhanced by short-term cloud cover \citep{solomon2017}. 
 
 \begin{wrapfigure}{r}{0.5\textwidth} 
-\vspace{-20pt}
+%\vspace{-20pt}
 \includegraphics[width=1.1\linewidth]{Figures/thegrid.pdf}
 \caption[The Discrete Grid Around Greenland]{A grid is defined in the global basis on a face of the Cubed Sphere centered on Greenland, upon which the gravitational anomaly is evaluated from the GRACE spherical harmonic solutions. In the image basis the grid is cartesian with length $256$. Grid lines in the image basis represent the diminishing spatial support of wavelets of different levels, from $\zeta=8$ (the entire image) to $\zeta=1$ (a unit grid cell). Note that in reality, each wavelet level has coverage over the entire image. The dotted line around Greenland is a coastal buffer of $0.5^{\circ}$ as in \cite{Harig+2016}. This Figure appeared in my Spring JP.} \label{fig:thegrid}
 %\vspace{-50pt}
@@ -156,6 +155,7 @@ The general conclusions drawn by these studies point to common atmospheric proce
 
 \subsection{Previous Results \label{sec:prevresults}}
 
+% Location of the 2012--2014 Deviation, wavelet reconstruction
 \begin{wrapfigure}{r}{0.5\textwidth} 
 \vspace{-50pt}
 %\centering
@@ -174,16 +174,20 @@ Figure~\ref{fig:deviant}).
 
 
 
+\section{Data}
+
+Observations of ice loss are measured remotely by weighing the mass by gravitational anomaly, photographing the surface area, and by measuring relative height of the ice with passive and active altimetry.
+
+In addition to data sets which directly measure aspects of ice change, we have complimentary measurements which capture some of the processes which control melting, such as air temperature, humidity, and atmospheric pressure. Atmospheric data are measured directly at weather station all over the world, and are synthesized into large continuous data sets referred to as "reanalysis" data. "Reanalysis" data sets are the outputs of climate models, which use assumptions about the laws which govern atmospheric processes to compute simulations of the atmosphere constrained by directly observed weather data.
 
 
 
 \section{Next steps}
 
 \begin{enumerate}
-\item get updated GRACE RL06 data
 \item quantitative image to image comparison of moisture transport and mass loss
 \item calculate mass loss on a sub basin spatial level across Greenland and compare to other estimates
-\item test wavelet results using different bases
+\item pressure relationship
 \end{enumerate}
 
 The NAO index is unitless, and represents the relative magnitude of the 500mb pressure difference between Azores and Reykjav\'ik compared to the 1950--2000 monthly mean.
