@@ -3,8 +3,9 @@
 \appendix
 
 \section{Appendix A: Data and code sources \label{app:a}}
-\textit{RL05 spherical harmonic coefficients for the time-variant geopotential field from the GFZ, JPL, and CSR data processing centers are available at:} \\
-\indent \url{ftp://podaac.jpl.nasa.gov/allData/grace/L2/}\\
+
+\textit{RL05 spherical harmonic coefficients for the time-variant geopotential field from the Center for Space Research data processing center at The University of Texas at Austin are available at:} \\
+\indent \url{ftp://podaac.jpl.nasa.gov/allData/grace/L2/CSR/RL05}\\
 
 \noindent\textit{Coefficients describing Earth's center of mass \cite[spherical harmonic degree~1, from][]{swenson2008} are available at:} \\
 \indent\url{ftp://podaac-ftp.jpl.nasa.gov/GeodeticsGravity/tellus/L2/degree_1/}\\
@@ -12,12 +13,23 @@
 \noindent\textit{Coefficients describing Earth's oblateness \cite[spherical harmonic degree~2, order~0, from][]{cheng2013} are available at:} \\
 \indent \url{ftp://ftp.csr.utexas.edu/pub/slr/degree_2/}\\
 
-\noindent\textit{Monthly values for the North Atlantic Oscillation Index are calculated by the Climate Prediction Center, with normalized monthly average values since January 1950 available at:} \\
-\indent \url{ftp://ftp.cpc.ncep.noaa.gov/wd52dg/data/indices/nao_index.tim}\\
+\noindent\textit{Index values for the North Atlantic Oscillation are calculated by the National Weather Service Climate Prediction Center \cite[see][]{cpcNAO}, with normalized monthly average values since January 1950 available at:} \\
+\indent \url{ftp://ftp.cpc.ncep.noaa.gov/wd52dg/data/indices/nao\_index.tim}\\
+\indent\textit{Normalized daily values since January 1950 are available at:} \\
+\indent \url{ftp://ftp.cpc.ncep.noaa.gov/cwlinks/norm.daily.nao.index.b500101.current.ascii}\\
 
-\noindent\textit{Reanalyzed MERRA-2 atmospheric data (3 dimensional, 6-hourly, instantaneous pressure-level analysis, V5.12.4) are calculated by NASA and made available by the Goddard Earth Sciences Data and Information Services Center at:} \\
-\indent \url{https://goldsmr5.gesdisc.eosdis.nasa.gov/opendap/MERRA2/M2I6NPANA.5.12.4/}\\
-Global Modeling and Assimilation Office (GMAO) (2015), MERRA-2 inst6\_3d\_ana\_Np: 3d,6-Hourly,Instantaneous,Pressure-Level,Analysis,Analyzed Meteorological Fields V5.12.4, Greenbelt, MD, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), Accessed: [Data Access Date], 10.5067/A7S6XP56VZWS
+
+\noindent\textit{MERRA-2 atmospheric reanalysis data are calculated by the NASA Global Modeling and Assimilation Office (GMAO) as part of the activities of NASA's Science Mission Directorate, and are archived and distributed by the Goddard Earth Sciences Data and Information Services Center (GES-DISC). All data was accessed between September 2018 and April 2019.} \\ 
+\indent \textit{A graphical user interface for generating data download links for specific subsets of variables, space, and time is available at:} \url{https://disc.gsfc.nasa.gov}\\
+\indent \textit{Data used in this study can be directly accessed at the following addresses:} \\
+\indent \url{https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2_MONTHLY/M2SMNXSLV.5.12.4/}\\
+\indent \url{https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/M2T1NXSLV.5.12.4/}\\
+\indent \url{https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/M2T1NXRAD.5.12.4/}\\
+
+
+\noindent\textit{Northern Hemisphere Land-Ocean Temperature Index anomalies from NASA's Goddard Institute for Space Studies Surface Temperature Analysis \cite[GISTEMP v3, see][]{hansen2010} were accessed in March 2019 and are available at:} \\ 
+\indent \url{https://data.giss.nasa.gov/gistemp/tabledata_v3/NH.Ts+dSST.csv}\\
+
 
 
 \noindent\textit{MATLAB code for the expansion and manipulation of spherical harmonic
