@@ -81,26 +81,18 @@ Benjamin Getraer %%Sign here
 
 \section{Introduction \label{sec:introduction}}
 
-Precipitous melting of the Greenland Ice Sheet forms a key part of the picture of climate change and global warming, especially in sensationalized news headlines in which subtlety and complexity of scientific conclusions may be waved in favor of drama (e.g. \textit{``Greenland's Ice Melt Is in 'Overdrive,' With No Sign of Slowing''} \cite[][]{climatenews}; \textit{``Greenland's ice is melting four times faster than thought''} \cite[][]{natgeo}; \textit{``'The only thing we can do is adapt': Greenland ice melt reaching 'tipping point,' study finds''} \cite[][]{cnn}). While generalized connections between climate warming and increased ice melting are both broadly true, and simple to communicate, there is a more complex picture behind the increased rates and tipping points referenced in popular media. 
+Precipitous melting of the Greenland Ice Sheet forms a key part of the picture of climate change and global warming, especially in sensationalized news headlines in which the subtlety and complexity of scientific conclusions may be waved in favor of drama [e.g. \textit{``Greenland's Ice Melt Is in `Overdrive,' With No Sign of Slowing''} \cite[][]{climatenews}; \textit{``Greenland's ice is melting four times faster than thought''} \cite[][]{natgeo}; \textit{```The only thing we can do is adapt': Greenland ice melt reaching `tipping point,' study finds''} \cite[][]{cnn}]. While generalized connections between climate warming and increased ice melting are both broadly true, and simple to communicate, there is a more complex picture behind the increased rates and tipping points referenced in popular media. 
 
-Physical drivers of the recent changes in ice melt have a significant amount of temporal and spatial variability, which complicate the picture one might get from merely extrapolating total losses over the past two decades into the future \cite[][]{enderlin2014,mcmillan2016,mattingly2018,hahn2018,bevis2019}. Previous work has shown that the total mass loss trend of the Greenland Ice Sheet between 2003--2017 is best modeled by a constant, not increasing, rate of ice melt \cite[][]{getraerFall}, and outside of the news headlines, the more extreme melt seasons of the past decade are increasingly being contextualized as natural variability occurring superimposed on underlying trends of global warming \cite[][]{hahn2018,bevis2019}. 
+Physical drivers of the recent changes in ice melt have a significant amount of temporal and spatial variability, which complicate the picture one might get from merely extrapolating total losses over the past two decades into the future \cite[][]{enderlin2014,mcmillan2016,mattingly2018,hahn2018,bevis2019}. Previous work has shown that the total mass loss trend of the Greenland Ice Sheet between 2003--2017 is best modeled by a constant, not increasing, rate of ice melt \cite[][]{getraerFall}, and outside of the news headlines, the more extreme melt seasons of the past decade are increasingly being contextualized as natural variability occurring superimposed on underlying trends of global warming \cite[][]{mattingly2018,hahn2018,bevis2019}. 
 
 In this study, I examine the relationship between mass loss and temperature on the Greenland Ice Sheet, contextualizing recent trends and variability within the 1980--2017 climate record of the MERRA-2 climate reanalysis and the 2003--2017 mass anomaly record of the Gravity Recovery and Climate Experiment (GRACE) (see~\nameref{sec:data}). I find that since 1980, temperatures over the Greenland Ice Sheet have risen differently from the overall Northern Hemisphere average, and that warming on the ice sheet has seasonal differences in both magnitude and spatial distribution. Direct comparison with mass loss shows that short-term ($<10$~year) increases in melt rates, such as those observed leading up to the anomalously high melt season of 2012, are directly correlated in time and space with increasing temperature anomaly. Finally, spatial comparisons between climate variables and mass loss are examined for insight into the accuracy of GRACE measurements at spatial scales nearing fundamental spatial resolution.
 
-An important motivator of this study is to explore the physical drivers of melting ice in order to better interpret communication about global warming and ice loss. When headlines prefer dramatic crisis over scientific accuracy, they risk losing both: the good science behind it is buried, and the door is left open to skeptics who often find legitimate flaws in the way information is being popularly disseminated (e.g. \textit{``Skeptics put the freeze on NASA 'hot air' about Greenland ice''} \cite[][]{fox}, \textit{``Greenland Glacier Grows, Despite Al Gore's Claims of Melting Glaciers''} \cite[][]{mrc}). When policy decisions must be made on a relatively short timescale compared to variability within climate signals, and have a limited record of data to draw from, the legitimacy of policy and of science depends on getting the story right. In this paper I hope to contribute a small amount to that goal.
+An important motivator of this study is to explore the physical drivers of melting ice in order to better interpret communication about global warming and ice loss. When headlines prefer dramatic crisis over scientific accuracy, they risk losing both: the good science behind it is buried, and the door is left open to skeptics who often find legitimate flaws in the way information is being popularly disseminated [e.g. \textit{``Skeptics put the freeze on NASA `hot air' about Greenland ice''} \cite[][]{fox}, \textit{``Greenland Glacier Grows, Despite Al Gore's Claims of Melting Glaciers''} \cite[][]{mrc}]. When policy decisions must be made on a relatively short timescale compared to variability within climate signals, and have a limited record of data to draw from, the percieved legitimacy of policy and of science depends on getting the story right. In this paper, I hope to contribute to that goal.
 
-\section{Previous Results}
+\subsection{Previous Results}
 
-With the launch of NASA's Gravity Recovery and Climate Experiment (GRACE) in 2003, a single source, big picture answer was provided to the question ``How much is Greenland Melting?'' As the dataset extended and analysis improved over the next decade, the GRACE satellites provided gravitational measurements of mass change over Greenland, showing clear losses every summer season, with regression models showing an apparent $10\%$ yearly acceleration ice loss through 2012
-\cite[][]{velicogna2009,angelen2014,enderlin2014,Harig+2016,bevis2019}. 
-
-Average global surface temperature is rising at an increasing rate --- approximately $0.09\degree$~C per decade since 1880, and approximately $0.26\degree$~C per decade since 1979 \cite[][]{ipcc2013_atmosphere}
---- with the past five years (2014--2018) being approximately $0.84\degree$~C warmer than the 1880--2018 average \cite[][]{NOAA_stateofclimate}. Earth's warming climate has contributed to significant melting of Earth's cryosphere, including the Greenland ice sheet where recent ice loss is estimated at $-244$~Gt per
-year \cite[][]{ipcc2013_cryosphere,Harig+2015a,Harig+2016}. The Greenland Ice Sheet covers just over $1\%$ of
-Earth's surface, and, if completely melted, would raise sea level by over $7$~m
-\cite[][]{ipcc2013_cryosphere}.
-Global melting of ice sheets and glaciers accounts for almost half of recently observed rising sea levels, with Greenland alone contributing almost $25$\% of the $3$~mm per year of sea level rise observed since 1993
-\cite[][]{Nerem}.  Our broad goal is to understand the nature and cause of deviations from modeled rates of Greenland ice melt in order to better understand, predict, and communicate the changing conditions of the planet.
+With the launch of NASA's Gravity Recovery and Climate Experiment (GRACE) in 2003, a single source, big picture answer was provided to the question ``How much is Greenland melting?'' As the dataset extended and analysis improved over the next decade, the GRACE satellites provided gravitational measurements of mass change over Greenland, showing clear losses every Summer season, with regression models showing an apparent $10\%$ yearly acceleration ice loss through 2012
+\cite[][]{velicogna2009,angelen2014,enderlin2014,Harig+2016,bevis2019}. This prior hypothesis, that Greenland's ice is melting at increasing rates, not only describes the first decade of GRACE data well (see Figure~\ref{fig:Getraer}), but makes sense within the broader context of global warming.
 
 
 \begin{figure}[h!]
@@ -110,19 +102,34 @@ Global melting of ice sheets and glaciers accounts for almost half of recently o
 \caption[Greenland Mass Trend: 2003--2017]{Total mass changes for Greenland over the complete GRACE record using equivalent methods to \cite{Harig+2016}. Shown in \textbf{A} are the $\underline{m}_1$ (linear) and $\underline{m}_2$ (quadratic) models for 01/2003--06/2013, comparable to previous estimates of the mass trend \citep{Harig+2016}. Note the significant departure of the extrapolated $\underline{m}_2$ model from the continuing signal. Shown in \textbf{B} is the $\underline{m}_1$ linear model for 01/2003--06/2017 with the standard of deviation of its residuals. Note that the $\underline{m}_1$ model does not significantly change after including the entire GRACE record. Error bars represent $2\sigma$ based on the combined variance of modeled Slepian coefficients $f_{\alpha}$ (see \cite{Harig+2016}, as well as \cite{getraerFall,getraerSpring}). This figure appeared in \cite{getraerFall,getraerSpring}, here with minor updates.} \label{fig:Getraer}
 \end{figure}
 
-Ice loss on the Greenland Ice Sheet has been observed in
-gravitational measurements from NASA's Gravity
-Recovery and Climate Experiment (GRACE), satellite and airplane based
-altimetry, and energy balance models, finding acceleration of melt in the ice mass signal over most of the last two decades \cite[][]{khan2015,Harig+2016}. Rates of ice loss increase by a
-combination of greater discharge from calving glacier termini at the edges of
-the ice-sheet and decreased surface mass-balance, the difference between
+Average global surface temperature is rising at an increasing rate---approximately $0.09\degree$~C per decade since 1880, and approximately $0.26\degree$~C per decade since 1979 \cite[][]{ipcc2013_atmosphere}---with the past five years (2014--2018) being approximately $0.84\degree$~C warmer than the 1880--2018 average \cite[][]{NOAA_stateofclimate}. Earth's warming climate has contributed to significant melting of Earth's cryosphere, including the Greenland Ice Sheet where recent ice loss is estimated at $-244$~Gt per
+year \cite[][]{ipcc2013_cryosphere,Harig+2015a,Harig+2016}. 
+Global melting of ice sheets and glaciers accounts for almost half of recently observed rising sea levels, with Greenland alone contributing almost $25$\% of the $3$~mm per year of sea level rise observed since 1993
+\cite[][]{Nerem}. 
+
+
+
+With globally increasing temperatures, it seems logical that melt on the Greenland Ice Sheet would increase each year. However, in the final $5$~years of GRACE data, the initially hypothesized acceleration did not pan out (see Figure~\ref{fig:Getraer}). A high level of melt in the Summer of 2012 was followed by two Summers of very little melting in 2013 and 2014, and the end of the GRACE record does not come close to continuing the initially hypothesized acceleration  \cite[see
+Figure~\ref{fig:Getraer} A, comparable to][their
+Figure~4]{Harig+2016}. This disruption of the apparent 2003--2012 trend was initially described as a ``departure'' or ``deviation'' \cite[][]{Harig+2016}, and more recently as a ``pause'' \cite[][]{bevis2019}, from the accelerating rate of ice loss. While theoretically the long term trajectory of ice loss in a warming climate would be accelerating, the higher melt years within the 2003--2012 are increasingly being contextualized as inter-annual variability with unknown correlation to broader warming and climate change \cite[][]{mattingly2018,hahn2018,bevis2019}. Previous analysis of the complete GRACE data set (2003--2017) using identical methods to \cite{Harig+2016} shows a linear, not accelerating, trend of ice loss for the Greenland Ice Sheet, constraining unexpected deviations mostly to an unusually large melt Summer in 2012 followed by a Summer of unusually little melt in 2013 (see
+Figure~\ref{fig:Getraer} B), both of which were primarily concentrated in the SW of the Greenland Ice Sheet (see Figure~\ref{fig:deviant}). 
+
+\begin{wrapfigure}{r}{0.5\textwidth} 
+%\vspace{-40pt}
+\includegraphics[width=\linewidth]{Figures/deviant.pdf}
+\caption[Location of the 2012--2014 Deviation]{The 2012--2014 deviation in Greenland mass (solid black) and the total from a 2-D wavelet based model (dashed black, see \nameref{app:b}). Note the large residual gap between the two lines from July~2012--July~2013, after the anomalously large melt season of 2012. By returning in the actual values of only four wavelet coefficients to the modeled wavelet reconstruction we improve the variance of the residuals by $15\%$. These wavelets are shown inset, colored as a heat map by their coefficient weights in September 2012 (the extreme of the deviation) and are concentrated in southwestern Greenland. ``m$_{\zeta\gamma}$'' refers to a wavelet basis function ``m'' of index $\gamma$ in level $\zeta$. This Figure appeared in my Spring JP.
+\label{fig:deviant}}
+\end{wrapfigure}
+
+Annual change in total ice mass is generally determined by a combination of discharge from calving glacier termini at the edges of
+the ice sheet and by surface mass-balance, the difference between
 seasonal snow accumulation and melting \cite[][]{khan2015,enderlin2014}.
-Significant inter-annual variability and asynchronicity has been observed in
-the discharge rates of the Greenland Ice Sheet's major drainage basins, while
-surface mass-balance is comparatively more predictable
-\cite[][]{mcmillan2016,enderlin2014}. Both contributions to ice loss accelerated between 2000--2012, combining for a total acceleration of ice mass
-estimated at nearly $-30$~Gt per year$^2$ over all of Greenland
-\cite[][]{velicogna2009,enderlin2014,bevis2019}.
+Significant inter-annual variability and inter-regional asynchronicity has been observed in the discharge rates of the Greenland Ice Sheet's major drainage basins, while
+surface mass-balance has seemed comparatively more predictable
+\cite[][]{mcmillan2016,enderlin2014}. The anomalous seasons of 2012--2013 have received attention in recent literature by studies attempting to understand how surface mass-balance processes produce such inter-annual variability. Correlations have been found with climate indices such as the phase of the North Atlantic Oscillation (NAO) \cite[][]{mcmillan2016,bevis2019,hahn2018,getraerFall}; transient atmospheric transport of warm air and water vapor in so-called "atmospheric rivers" \citep{mattingly2018}; non-radiative energy flux enhanced by short-term cloud cover \citep{solomon2017}; as well as albedo and net downward short-wave radiation flux \citep{angelen2014}.  These theories generally relate to variability in atmospheric circulation over Greenland, demonstrating that certain conditions which enhance melt tended to occur more frequently than usual bewteen 2003--2012, and were especially strong during the 2012 melt season. 
+
+
+
 
 \begin{figure}[h]
 \centering
@@ -131,37 +138,34 @@ estimated at nearly $-30$~Gt per year$^2$ over all of Greenland
 \caption[Atmospheric Circulation Around Greenland]{Example of atmospheric conditions at the $250$~hPa isobar over the North Atlantic preceding record Greenland Ice Sheet surface melt, 07/09/2012 (from MERRA-2 reanalyzed data). Isobar height contours are labeled in $10^4$~m, and wind vectors are shown by arrows. Note the location of the northern polar jet stream, dividing the low and high isobar heights around the $1.05\times 10^{4}$~m contour. The temporary North Atlantic Rossby wave is labeled as the ``HI'' pressure anti-cyclone moving north towards southern Greenland, with a complementary ``LO'' pressure cyclone centered over Labrador. Note that the jet stream is deflected through the Labrador Sea and Baffin Bay, along the West Coast of Greenland. As a result of these conditions, the ``LO'' pressure over Reykjav\'ik is pushed north, and the pressure difference between Reykjav\'ik  and Azores is lowered, resulting in an negative NAO index (top left).} \label{fig:jetstream}
 \end{figure}
 
-A study by \cite{Harig+2016} modeling the mass of the Greenland Ice Sheet
-using GRACE data products showed deviations from the long-term accelerating
-trend, starting with a high level of melt in the summer of 2012, and followed by two
-summers of little melting in 2013 and 2014 \cite[see
-Figure~\ref{fig:Getraer} A, comparable to][their
-Figure~4]{Harig+2016}. Our analysis of the complete GRACE data set (2002--2017) using identical methods showed a linear,
-not accelerating, trend of ice loss for the Greenland Ice Sheet, constraining the observed unexpected deviations to an unusually large melt summer of 2012 followed by a summer of unusually little melt in 2013 (see
-Figure~\ref{fig:Getraer} B). 
-
-
-The anomalous seasons of 2012--2013 have received attention in recent literature by studies attempting to understand how surface mass balance processes produce such inter-annual variability. Correlations have been found with climate indices such as the phase of the North Atlantic Oscillation (NAO) \cite[][]{mcmillan2016,bevis2019,getraerFall}, transient atmospheric transport of warm air and water vapor in so-called "atmospheric rivers" \citep{mattingly2018}, and non-radiative energy flux enhanced by short-term cloud cover \citep{solomon2017}. 
-
-
 
 
 %% SIGNIFICANCE OF THE POLAR JET STREAM
 \subsection{Atmospheric Circulation Over the Greenland Ice Sheet}
-The atmospheric circulation affecting the Greenland Ice Sheet is broadly controlled by the position of the polar jet stream in the northern hemisphere \cite[][]{hanna2013,mattingly2018}. The northern polar jet stream is a strong current of air moving generally eastward, dividing the warm, high pressure air of the temperate mid-latitudes and the cold, low pressure air of the Arctic. In the North Atlantic, the average position of the polar jet results in a low pressure Arctic system centered near Iceland, and a high pressure temperate system centered near the Azores. The strength of the polar jet stream moving air zonally across the North Atlantic is determined by the relative meridional pressure difference across the North Atlantic, and varies irregularly in what is called the North Atlantic Oscillation (NAO).
+The atmospheric circulation affecting the Greenland Ice Sheet is broadly controlled by the position of the polar jet stream in the northern hemisphere \cite[][]{hanna2013,mattingly2018}. The northern polar jet stream is a strong current of air moving generally eastward, dividing the warm, high pressure air of the temperate mid-latitudes and the cold, low pressure air of the Arctic. In the North Atlantic, the average position of the polar jet results in a low pressure Arctic system centered near Iceland, and a high pressure temperate system centered near the Azores. The strength of the polar jet stream moving air zonally across the North Atlantic is determined by the relative meridional pressure difference across the North Atlantic, and varies irregularly in what is called the North Atlantic Oscillation (NAO) \cite[][]{hurrelNAO}.
 
-The NAO is often indexed for use in climate analyses by differencing the atmospheric pressure over the North Atlantic and a "loading pattern" of pressure determined by principal component analysis to capture the average meridional pattern \cite[][]{hurrelNAO,cpcNAO}. A positive phase NAO index reflects a stronger meridional difference in pressure than usual, while negative values reflect a weaker meridional difference than usual \cite[][]{hurrelNAO}. The index is a unitless ratio normalized by the variance of atmospheric pressure from the loading pattern.
+%The NAO is often indexed for use in climate analyses by differencing the atmospheric pressure over the North Atlantic and a "loading pattern" of pressure determined by principal component analysis to capture the average meridional pattern \cite[][]{hurrelNAO,cpcNAO}. A positive phase NAO index reflects a stronger meridional difference in pressure than usual, while negative values reflect a weaker meridional difference than usual \cite[][]{hurrelNAO}. %The index is a unitless ratio normalized by the variance of atmospheric pressure from the loading pattern.
+
+%In studying melt events on the Greenland Ice Sheet, many studies have used an NAO index to relate melting conditions to atmospheric pressure patterns. Strong Summer melt events often occur with a negative NAO index, suggesting that mechanisms which drive the NAO may have some kind of predictable implications for melting on Greenland \cite[][]{hanna2013,mattingly2018,mcmillan2016,bevis2019,getraerFall,hahn2018}. More precisely, the use of the NAO index suggests that meridional pressure differences which drive westerly winds across the North Atlantic are a physical mechanism for strengthening melt conditions over Greenland --- warm, moist air, and increased cloud cover \cite[][]{hanna2013,mattingly2018,mcmillan2016,bevis2019,getraerFall,hahn2018}. This assumption, however, obscures the fact that melt events are often caused by southerly winds advecting atmospheric rivers of warm, moist air north, which is driven by a zonal difference in pressure \cite[][]{hanna2013,mattingly2018}. Although the NAO loading pattern for some months suggest southwesterly winds, it is not designed to best capture the type of pattern associated with greater melting events.
 
 
-In studying melt events on the Greenland Ice Sheet, many studies have used an NAO index to relate melting conditions to atmospheric pressure patterns. Strong summer melt events often occur with a negative NAO index, suggesting that mechanisms which drive the NAO may have some kind of predictable implications for melting on Greenland \cite[][]{hanna2013,mattingly2018,mcmillan2016,bevis2019,getraerFall,hahn2018}. More precisely, the use of the NAO index suggests that meridional pressure differences which drive westerly winds across the North Atlantic are a physical mechanism for strengthening melt conditions over Greenland --- warm, moist air, and increased cloud cover \cite[][]{hanna2013,mattingly2018,mcmillan2016,bevis2019,getraerFall,hahn2018}. This assumption, however, obscures the fact that melt events are often caused by southerly winds advecting atmospheric rivers of warm, moist air north, which is driven by a zonal difference in pressure \cite[][]{hanna2013,mattingly2018}.
+The polar jet does not maintain stable zonal flow, and regularly develops instabilities in which flow is diverted meridionally in large waves. During these events, known as a Rossby waves, temporary high-pressure systems push northward into the arctic accompanied by complementary low-pressure cyclones which develop on either side of the high-pressure block. The combined flow from these pressure systems advects warm air from the temperate mid-latitudes into the Arctic until the Rossby wave ``breaks'' and the jet stream return to its average location.
 
-The polar jet does not maintain stable zonal flow, and regularly develops wiggles in which flow is diverted meridionally in large waves. During these events, known as a Rossby waves, temporary high-pressure systems push northward into the arctic accompanied by complementary low-pressure cyclones which develop on either side of the high-pressure block. The combined flow from these pressure systems advects warm air from the temperate mid-latitudes into the Arctic until the Rossby wave ``breaks'' and the jet stream return to its typical location.
 
-Melt events on Greenland are generally driven by zonal differences in pressure resulting from Rossby wave systems with high pressure ``blocking'' over southern Greenland, which create atmospheric rivers advecting warm moist air over the ice sheet \cite[][]{mattingly2018}. In contrast, the NAO index measures against a meridional patterns of pressure, with the result that although melt events often correspond with a weaker NAO, a lower the NAO index does not strictly imply a greater melt event.
+In studying melt events on the Greenland Ice Sheet, many studies have used an NAO index to relate melting conditions to atmospheric pressure patterns. Strong Summer melt events often occur with a negative NAO index, suggesting that mechanisms which drive the NAO may have some kind of predictable implications for melting on Greenland \cite[][]{hanna2013,mattingly2018,mcmillan2016,bevis2019,getraerFall,hahn2018}. However, melt mechanisms such as atmospheric rivers advecting warm moist air over the ice sheet are related to zonal differences in pressure resulting from Rossby wave systems with high pressure ``blocking'' over southern Greenland \cite[][]{mattingly2018}. In contrast, the NAO index measures against a meridional patterns of pressure, with the result that although melt events often correspond with a weaker NAO, a lower the NAO index does not strictly imply a greater melt event (Figure~\ref{fig:naovt}).
+
+\begin{figure}[h]
+\centering
+\makebox[\textwidth][c]{\includegraphics[width=1\linewidth]
+{/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/NAOvAirT.png}}
+\caption[NAO vs. Near surface air temperature: 2003--2017]{Comparison of daily NAO index values to mean daily near surface temperature anomaly over the Greenland Ice Sheet, 2003--2017 (see Section:~\ref{sec:data}~\& \nameref{app:a}). The scatter plot of values in \textbf{A} is binned and colored by concentration of values (blue is low, yellow is high), and shows a type-1 LSR linear fit in red, representing the fit which characterizes a relationship of temperature determined by the NAO index. The LSR fit is influenced by the orientation of the values concentrated towards the center of the plot. The blue line is the first principal component of the two data vectors, showing the single axis which best minimizes the variance of the scattered values. Note that both show a negative correlation (i.e. lower NAO relating to higher 2m air temperatures over the Greenland Ice Sheet), but the PCA fit better captures the overall extent of the data scatter, and shows almost a $1$:$1$ relationship. The variance of the data around these fit lines is illustrated in plots \textbf{B} and \textbf{C}, which show the timeseries of the two values over the 2012 and 2015 Summers. Note that in 2012, NAO and T2M correlated quite closely, while in 2015, there is far less of a connection and the lowest NAO values do not correspond to the highest temperatures.} \label{fig:naovt}
+\end{figure}
 
 High pressure blocking over southern Greenland is often correlated with a negative NAO index, because the northern excursion of high pressure systems influences meridional pressure balance. However, despite their correlation, the two are fundamentally different atmospheric patterns which drive advection of air in different directions. In some recent studies, the Greenland Blocking Index (GBI) has been used, which is essentially the average pressure over Greenland. While this is more specific and more relevant than the NAO index, it still does not directly reflect the meridional advection which drives melt.
 
-In this paper, I explore simple indices which directly compare zonal pressure differences which flow of warm air into the arctic over the Greenland Ice Sheet, and compare those results to the NAO and GBI indices.
+The search for an easily definable index which captures atmospheric circulation patterns that drive melt fell outside of the scope of this project. Circulation patterns provide important context for the variability of weather events, but here I return to the more fundamental question of surface level melt processes. While the majority of energy that is absorbed by melting ice comes from solar radiation and processes which amplify insolation \cite[][]{mattingly2018, solomon2017,angelen2014}, near surface temperature broadly determines the regions which will be melting at any given time \cite[][]{broeke2011}. 
+
+In this paper, I examine trends near surface temperature between 1980--2017 and correlation of near surface temperature to mass anomaly between 2003--2017 in order to provide context to previous results which have been examining the variability in mass loss and atmospheric forcings over the past two decades. While a few studies have examined direct relationships between temperature and melting, comparisons connect to melt maps generated through passive microwave observation from satellites, and are do not examine the direct relationship to mass loss data such as GRACE \cite[][]{cullather2018,valisuo2018}.
 
 
 
@@ -181,22 +185,13 @@ In this paper, I explore simple indices which directly compare zonal pressure di
 
 
 
-\subsection{Previous Results \label{sec:prevresults}}
 
 
-Location of the 2012--2014 Deviation, wavelet reconstruction
-\begin{wrapfigure}{r}{0.5\textwidth} 
-\vspace{-50pt}
-\includegraphics[width=\linewidth]{Figures/deviant.pdf}
-\caption[Location of the 2012--2014 Deviation]{The 2012--2014 deviation in Greenland mass and the total from the reconstructed modeled wavelet coefficients. By adding in the real values of only four wavelet coefficients back into the modeled wavelet reconstruction we improve the variance explanation by $15\%$. These wavelets are shown inset, weighted by their values in September 2012, the extreme of the deviation, and are concentrated in southwestern Greenland. ``m$_{\zeta\gamma}$'' refers to a wavelet basis function ``m'' of index $\gamma$ in level $\zeta$. This Figure appeared in my Spring JP.
-\label{fig:deviant}}
-\end{wrapfigure}
-
-In my Spring 2018 JP, I explored the use of a 2-D wavelet basis to represent the GRACE gravimetric data over Greenland such that meaningfully contributing basis functions also contained information about spatial structure (see
-Figure~\ref{fig:}). 
-
-I developed a procedure for choosing the most important wavelet basis functions in order to extract the true fluctuation of the signal from the over-determined image calculated from the typical GRACE spherical harmonic basis. I then tested which wavelet basis function best captured the 2012--2013 deviation from the expected signal, finding the deviations to be concentrated in southwestern Greenland (see
-Figure~\ref{fig:deviant}). 
+%In my Spring 2018 JP, I explored the use of a 2-D wavelet basis to represent the GRACE gravimetric data over Greenland such that meaningfully contributing basis functions also contained information about spatial structure (see
+%Figure~\ref{fig:}). 
+%
+%I developed a procedure for choosing the most important wavelet basis functions in order to extract the true fluctuation of the signal from the over-determined image calculated from the typical GRACE spherical harmonic basis. I then tested which wavelet basis function best captured the 2012--2013 deviation from the expected signal, finding the deviations to be concentrated in southwestern Greenland (see
+%Figure~\ref{fig:deviant}). 
 
 
 
@@ -209,6 +204,7 @@ Figure~\ref{fig:deviant}).
 
 Observations of ice loss across large areas are measured remotely by satellites using several different methods, including weighing the mass by gravitational anomaly (such as NASA's GRACE and GRACE Follow-On missions), photographing surface area (such as NASA's \href{https://landsat.gsfc.nasa.gov}{Landsat} and \href{https://terra.nasa.gov/about/terra-instruments/modis}{MODIS} missions), and by measuring relative height of the ice with active laser altimetry (such as NASA's \href{https://icesat.gsfc.nasa.gov/icesat/}{ICESat} and \href{https://icesat-2.gsfc.nasa.gov}{ICESat-2} missions) \cite[][]{khan2015}.
 
+Data used in this study come from the GRACE satellite mission, span from 2003--2017, and were released as global spherical harmonic coefficients by NASA in the CSR-RL05 data product (see \nameref{app:a}; for an in depth review of GRACE data reduction methods, see \nameref{app:b}). For this project, the RL05 spherical harmonic coefficients were evaluated directly onto the analysis grid (see Figure~\ref{fig:gridbasins}).
  
  \subsection{Atmospheric Data}
  
@@ -255,7 +251,7 @@ Lastly, Northern Hemisphere climate data are from the Goddard Institute for Spac
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \section{Methods}
  
-All analysis of MERRA-2 data over the Greenland Ice Sheet was masked using a widely-used shape-file of the ice sheet developed from the drainage subregions defined by \cite{zwally2012}, reorganized into quadrants similar to \cite{mcmillan2016} (see Figure~\ref{fig:gridbasins}).
+All analysis of MERRA-2 data over the Greenland Ice Sheet was masked using a widely used shape-file of the ice sheet developed from the drainage subregions defined by \cite{zwally2012}, reorganized into quadrants similar to \cite{mcmillan2016} (see Figure~\ref{fig:gridbasins}). Anomaly values were calculated by subtracting the mean value for that month relative to the given period being examined. Seasonal values are the mean of all values falling within the months of that season, defined as Winter (December-January-February), Spring (March-April-May), Summer (June-July-August), and Fall (September-October-November). Comparisons of mass anomaly and MERRA-2 variables were done on the analysis grid described in Figure~\ref{fig:gridbasins}, using bi-linear interpolation to sample the MERRA-2 variables. Spatially heterogeneous trends were analyzed by modeling the anomaly of each point on the analysis grid through time (e.g. Figure~\ref{fig:tslopes}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Basins figure
@@ -270,7 +266,7 @@ All analysis of MERRA-2 data over the Greenland Ice Sheet was masked using a wid
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% RESULTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \section{Results and Discussion}
+ \section{Results}
  
  \subsection{Near Surface Temperature Trends Since 1980}
  
@@ -331,11 +327,11 @@ Despite the overall rise in temperature since the 1980's, near surface air tempe
 
 Taking into consideration the probability of random simultaneous negative drift in 2m air temperature anomaly across all seasons ($\prod_{\mathrm{season}=i} p_i = 0.0091$) it becomes apparent that within the larger, expected warming trend of 1980--present, Greenland experienced an unexpected cooling hiatus during the 2003--2017 GRACE record (see Figure~\ref{fig:seasonalclimate} \& Table~\ref{tab:seasonaltrends}). It is important to note that, regardless of fitted trends, the majority of the 10 warmest seasons of the 1980--2017 record have occurred during the GRACE record ($6/10$ Winters, $8/10$ Springs, $8/10$ Summers, $6/10$ Falls), and for the first decade of GRACE data, all but one Summer season on the Greenland Ice Sheet had mean temperatures above the 1980--2017 average see (Figure~\ref{fig:seasonalclimate} \& Table~\ref{tab:rankedseasons}).
 
-In addition to differences in near surface temperature anomaly trends found in different seasons and decades, there is also significant spatial heterogeneity temperature anomaly trends across the Greenland Ice Sheet. I calculated a linear fit for temperature anomaly at each node of the grid across Greenland (see Figure~\ref{fig:gridbasins}) for years between 1980--2017, from the beginning of GRACE until the end of 2012 (2003--2012), and for the entire GRACE record (2003--2017), illustrated in Figure~\ref{fig:tslopes}. The trends within those three time periods have very different features, characterized by widespread warming in all seasons (1980--2017), general cooling in non-summer seasons with strong Summer warming in the SW region (2003--2012), and general cooling across the vast majority of the ice sheet in all seasons (2003--2017) (Figure~\ref{fig:tslopes}). 
+In addition to differences in near surface temperature anomaly trends found in different seasons and decades, there is also significant spatial heterogeneity temperature anomaly trends across the Greenland Ice Sheet. I calculated a linear fit for temperature anomaly at each node of the grid across Greenland (see Figure~\ref{fig:gridbasins}) for years between 1980--2017, from the beginning of GRACE until the end of 2012 (2003--2012), and for the entire GRACE record (2003--2017), illustrated in Figure~\ref{fig:tslopes}. The trends within those three time periods have very different features, characterized by widespread warming in all seasons (1980--2017), general cooling in non-Summer seasons with strong Summer warming in the SW region (2003--2012), and general cooling across the vast majority of the ice sheet in all seasons (2003--2017) (Figure~\ref{fig:tslopes}). 
 
 %The patterns of temperature captured in Greenland averages which are analyzed over decades (see Figures~\ref{fig:climatewarming}~\&~\ref{fig:seasonalclimate}) are important in understanding first order changes occurring in Greenland climate, but fail to capture
 
-Strong warming in the SW during first decade of the GRACE record was followed by a very different pattern of warming in the north and cooling in the south from 2013--2017, resulting in a trend over the entire 2003--2017 period which obscures the temperature anomaly signal in the SW (Figure~\ref{fig:tslopes}). Also of note is that Summer temperature trends differ significantly in both magnitude and spatial pattern from non-summer trends, which dominate the fitted trends seen when seasons are not considered separately (see Figures~\ref{fig:seasonalclimate}~\&~\ref{fig:tslopes}).
+Strong warming in the SW during first decade of the GRACE record was followed by a very different pattern of warming in the north and cooling in the south from 2013--2017, resulting in a trend over the entire 2003--2017 period which obscures the temperature anomaly signal in the SW (Figure~\ref{fig:tslopes}). Also of note is that Summer temperature trends differ significantly in both magnitude and spatial pattern from non-Summer trends, which dominate the fitted trends seen when seasons are not considered separately (see Figures~\ref{fig:seasonalclimate}~\&~\ref{fig:tslopes}).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -345,7 +341,7 @@ Strong warming in the SW during first decade of the GRACE record was followed by
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=0.9\textwidth]
 {/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/SeasonalTall.png}}
-\caption[Seasonal 2m temperature trends over the Greenland Ice Sheet: 1980--2017]{Seasonal trends in MERRA-2 2m air temperature across the Greenland Ice Sheet for 1980--2017. Plotted points are the seasonal mean for each year, and are fit with a type-1 least squares regression for the full time period (solid) and the GRACE time period (dashes). Note that between 1980--2017 Winter temperatures warmed more than summer temperatures, while during the GRACE time period (2003--2017) Summer temperatures dropped more than Winter temperatures. Table~\ref{tab:seasonaltrends} contains an analysis of the significance of each trend and its confidence interval, showing that the seasonal trends in mean monthly temperature over the full time period are significant, while the seasonal trends over the GRACE period are not significantly differentiable (in both $p$-value and confidence interval) from trends in random data drawn randomly from a similar normal distribution. \label{fig:seasonalclimate}}
+\caption[Seasonal 2m temperature trends over the Greenland Ice Sheet: 1980--2017]{Seasonal trends in MERRA-2 2m air temperature across the Greenland Ice Sheet for 1980--2017. Plotted points are the seasonal mean for each year, and are fit with a type-1 least squares regression for the full time period (solid) and the GRACE time period (dashes). Note that between 1980--2017 Winter temperatures warmed more than Summer temperatures, while during the GRACE time period (2003--2017) Summer temperatures dropped more than Winter temperatures. Table~\ref{tab:seasonaltrends} contains an analysis of the significance of each trend and its confidence interval, showing that the seasonal trends in mean monthly temperature over the full time period are significant, while the seasonal trends over the GRACE period are not significantly differentiable (in both $p$-value and confidence interval) from trends in random data drawn randomly from a similar normal distribution. \label{fig:seasonalclimate}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -357,7 +353,7 @@ Strong warming in the SW during first decade of the GRACE record was followed by
 \centering
 \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]
 {/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/TempSlopes.pdf}}
-\caption[Spatial Variability of Temperature Anomaly Trends]{Linear trends in near surface temperature anomaly across the Greenland Ice Sheet. The trend maps show three different time periods in separate rows, and three different seasonal combinations in separate columns. Note that over the entire 1980--2017 record, Summer warming has occurred mostly in the N and NW regions. In contrast to that 37 year trend, the first decade of GRACE saw concentrated Summer warming in the SW. This SW warming did not continue through the last 5 years of the time period, which saw a counter balancing cooling in the S and warming in the N, resulting in an apparent overall Summer cooling over the entire 2003--2017 time period. The crossplots in the righthand column show the strong correlation of non-summer months to the trends seen when all seasons are considered, demonstrating that Summer trends are significantly different from the trends seen in other seasons, and are almost completely obscured unless Summer months are specifically isolated. Trend values are type-1 least square regressions after removing seasonal cycles.} \label{fig:tslopes}
+\caption[Spatial Variability of Temperature Anomaly Trends]{Linear trends in near surface temperature anomaly across the Greenland Ice Sheet. The trend maps show three different time periods in separate rows, and three different seasonal combinations in separate columns. Note that over the entire 1980--2017 record, Summer warming has occurred mostly in the N and NW regions. In contrast to that 37 year trend, the first decade of GRACE saw concentrated Summer warming in the SW. This SW warming did not continue through the last 5 years of the time period, which saw a counter balancing cooling in the S and warming in the N, resulting in an apparent overall Summer cooling over the entire 2003--2017 time period. The crossplots in the righthand column show the strong correlation of non-Summer months to the trends seen when all seasons are considered, demonstrating that Summer trends are significantly different from the trends seen in other seasons, and are almost completely obscured unless Summer months are specifically isolated. Trend values are type-1 least square regressions after removing seasonal cycles.} \label{fig:tslopes}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -385,7 +381,7 @@ Strong warming in the SW during first decade of the GRACE record was followed by
 10	&   2002		&	$0.56 \pm 1.60$ &	1987	&	$2.35  \pm 3.79$	\\
 \hline
 \end{tabular}
-\caption[Warmest seasons over Greenland Ice Sheet]{Top 5 years ranked by highest mean 2m air temperature for Summer and Winter seasons over the Greenland Ice Sheet (1980--2017). Adjacent to the year, in parentheses, is that year's rank by greatest mass loss (2003--2017). Mean temperature is the mean of the three monthly means in that season, and the reported error is the standard of deviation of the three monthly means in that season. Despite a downward drift in mean temperature between 2003--2017, a majority of the top ten warmest seasons on record occurred within that time frame. Note the separation of 2012 from the next closest years, making it the warmest summer on record. Worth noting is that 2013, the year of least mass loss on the GRACE record, ranks as the 5th coldest Summer season in the 1980--2017 record, and the coldest Summer season of the GRACE time period. \label{tab:rankedseasons}}
+\caption[Warmest seasons over Greenland Ice Sheet]{Top 5 years ranked by highest mean 2m air temperature for Summer and Winter seasons over the Greenland Ice Sheet (1980--2017). Adjacent to the year, in parentheses, is that year's rank by greatest mass loss (2003--2017). Mean temperature is the mean of the three monthly means in that season, and the reported error is the standard of deviation of the three monthly means in that season. Despite a downward drift in mean temperature between 2003--2017, a majority of the top ten warmest seasons on record occurred within that time frame. Note the separation of 2012 from the next closest years, making it the warmest Summer on record. Worth noting is that 2013, the year of least mass loss on the GRACE record, ranks as the 5th coldest Summer season in the 1980--2017 record, and the coldest Summer season of the GRACE time period. \label{tab:rankedseasons}}
 \end{center}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -396,13 +392,13 @@ Strong warming in the SW during first decade of the GRACE record was followed by
 \clearpage
 \subsection{Comparison of Mass Loss and MERRA-2 Variables}		
 
-As a first order analysis of atmospheric drivers of ice loss, I compared the net change in Greenland mass over the entire GRACE period to mean the average Summer (JJA) surface skin temperature (ST), 2 meter air temperature (T2M), and 2 meter specific humidity (QV2M) over the entire period (Figure\ref{fig:comparisontotal}). Point-to-point comparisons were binned every by mass loss, showing a positive correlation between temperature and humidity and ice loss, as generally expected (Figure\ref{fig:comparisontotal}). 
+As a first order analysis of atmospheric drivers of ice loss, I compared the net change in Greenland mass over the entire GRACE period to mean the average Summer (JJA) surface skin temperature (ST), 2 meter air temperature (T2M), and 2 meter specific humidity (QV2M) over the entire period (Figure~\ref{fig:comparisontotal}). Point-to-point comparisons were binned every by mass loss, showing a positive correlation between temperature and humidity and ice loss, as generally expected (Figure~\ref{fig:comparisontotal}). 
 
-For areas with less than $750$~kg/m$^2$ of ice loss over 2003--2017, higher amounts of ice loss correlated with quadratically higher temperatures and humidity (melting more ice requires a non-linear increase in temperature, Figure\ref{fig:comparisontotal})). In contrast, there was no difference in mean temperature between areas with $750$~kg/m$^2$ of ice loss and those with $2000$~kg/m$^2$, and it was only at losses over $2750$~kg/m$^2$ at which mean temperature and humidity had to be significantly higher (Figure\ref{fig:comparisontotal}). 
+For areas with less than $750$~kg/m$^2$ of ice loss over 2003--2017, higher amounts of ice loss correlated with quadratically higher temperatures and humidity (melting more ice requires a non-linear increase in temperature, Figure~\ref{fig:comparisontotal})). In contrast, there was no difference in mean temperature between areas with $750$~kg/m$^2$ of ice loss and those with $2000$~kg/m$^2$, and it was only at losses over $2750$~kg/m$^2$ at which mean temperature and humidity had to be significantly higher (Figure~\ref{fig:comparisontotal}). 
 
-The plateau in the relationship between mean temperature and humidity and mass loss of $750$--$2500$~kg/m$^2$ (2003--2017) is the effect of GRACE detected mass loss within that range aligning with a large variance in mean temperature (Figure\ref{fig:comparisontotal}). The average surface temperature (ST) within that range of mass loss hovers just above $-8.15^{\circ}$C ($265^{\circ}$K), corresponding generally with the mid-range of the ice sheet, below the upper accumulation zone where mass change was positive, but shy of the periphery (Figure\ref{fig:comparisontotal}). Over the 2003--2017 record, mean ST was consistently about $2^{\circ}$C lower than T2M, and examining the best fit regressions between the two temperatures and the GRACE data, mass loss may to be subtly more sensitive to ST---melting more ice requires a smaller change in ST than T2M (Figure\ref{fig:comparisontotal}).
+The plateau in the relationship between mean temperature and humidity and mass loss of $750$--$2500$~kg/m$^2$ (2003--2017) is the effect of GRACE detected mass loss within that range aligning with a large variance in mean temperature (Figure~\ref{fig:comparisontotal}). The average surface temperature (ST) within that range of mass loss hovers just above $-8.15^{\circ}$C ($265^{\circ}$K), corresponding generally with the mid-range of the ice sheet, below the upper accumulation zone where mass change was positive, but shy of the periphery (Figure~\ref{fig:comparisontotal}). Over the 2003--2017 record, mean ST was consistently about $2^{\circ}$C lower than T2M, and examining the best fit regressions between the two temperatures and the GRACE data, mass loss may to be subtly more sensitive to ST---melting more ice requires a smaller change in ST than T2M (Figure~\ref{fig:comparisontotal}).
 
-Similar comparisons were conducted for each quadrant of Greenland comparing total mass loss to T2M (Figure\ref{fig:comparisonregions}). The eastern half of the ice sheet showed strong quadratic correlation between mass loss and temperature for areas with less than $1000$~kg/m$^2$, and the correlation in the NE never plateaus (Figure\ref{fig:comparisonregions}). In contrast, the quadratic relationship for the western half of the ice sheet extends only to areas of less than $750$~kg/m$^2$ in the NW, and barely exists in the SW where a subregion estimated by GRACE to have near $0$~kg/m$^2$ of mass loss is located in one of the highest temperature coastal environments on the ice sheet (Figure\ref{fig:comparisonregions}). 
+Similar comparisons were conducted for each quadrant of Greenland comparing total mass loss to T2M (Figure~\ref{fig:comparisonregions}). The eastern half of the ice sheet showed strong quadratic correlation between mass loss and temperature for areas with less than $1000$~kg/m$^2$, and the correlation in the NE never plateaus (Figure~\ref{fig:comparisonregions}). In contrast, the quadratic relationship for the western half of the ice sheet extends only to areas of less than $750$~kg/m$^2$ in the NW, and barely exists in the SW where a subregion estimated by GRACE to have near $0$~kg/m$^2$ of mass loss is located in one of the highest temperature coastal environments on the ice sheet (Figure~\ref{fig:comparisonregions}). 
 
 
 
@@ -424,7 +420,7 @@ Similar comparisons were conducted for each quadrant of Greenland comparing tota
 \centering
 \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]
 {/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/RegionalMassLossComparison.png}}
-\caption[Comparison of Regional Mass Loss with T2M: 2003--2012]{} \label{fig:comparisontotal}
+\caption[Comparison of Regional Mass Loss with T2M: 2003--2012]{Total mass change over the Greenland Ice Sheet, compared to the average daily mean near-surface temperature (T2M,~red), and divided by region (see Figure~\ref{fig:comparisontotal} for method details, and Figure~\ref{fig:gridbasins} for regional definitions). The eastern (western) regions are shown to the left (right), with N and S quadrants outlined in black and red respectively at the bottom, corresponding to the black and red binned scatter plots above. Note that the NE shows the most coherent quadratic relationship between mass loss and T2M, and also has the lowest amounts of mass loss. In contrast, the SW has a wide range of mass loss and an area of low mass loss along the coast which disrupts the relationship bewteen T2M and mass.} \label{fig:comparisonregions}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
 
@@ -436,8 +432,9 @@ Similar comparisons were conducted for each quadrant of Greenland comparing tota
  \begin{figure}[h]
 \centering
 \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]
-{/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/TempMassTrend.png}}
-\caption[Near Surface Temperature and Mass Anomaly Trends: 2003--2012]{} \label{fig:tslopes}
+{/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/TempMassTrend2.png}}
+\caption[Near Surface Temperature and Mass Anomaly Trends: 2003--2012]{Near surface temperature trend (\textbf{A}), and mass anomaly acceleration (\textbf{B}), between 2003--2012 (see Figure~\ref{fig:tslopes}). Note the positive temperature trend in the SW coincident with increasing rates of mass loss over that time period. The quality of fit for the temperature trend is shown in (\textbf{C}). Note that the strongest correlation occurs along the coast, also in very similar orientation to the GRACE signal.
+} \label{fig:tslopesSummer}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -472,57 +469,69 @@ Analysis of near surface temperature indicates that the warming of the 1990's br
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	TEMP MASS RELATIONSHIP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Comparing GRACE ice loss to temperature}
+Assuming that the physical relationship between temperature and melt is the same across the ice sheet, the underlying cause of the plateau in Figure~\ref{fig:comparisontotal} may be related to measurement, interannual variability, or mass movement. Bias and spatial resolution in GRACE continues to be pushed \cite[see][]{Harig+2012,save2016,getraerSpring}, but remains conservatively estimated at $\sim300$km $\times$ $300$km \cite[][; Greenland itself is approximately $2700$km North--South $\times$ $1200$km East--West]{scanlon2016}. 
 
-Assuming that the physical relationship between temperature and melt is the same across the ice sheet, the underlying cause of the plateau in Figure\ref{fig:comparisontotal} may be related to measurement, interannual variability, or mass movement. Bias and spatial resolution in GRACE continues to be pushed \cite[see][]{Harig+2012,save2016,getraerSpring}, but remains conservatively estimated at $\sim300$km $\times$ $300$km \cite[][; Greenland itself is approximately $2700$km North--South $\times$ $1200$km East--West]{scanlon2016}. 
+Regions between the strong mass loss of the lower ice sheet and mass gain in the accumulation zone may be poorly resolved, and not accurately reflect local melt. This explanation is directly supported by the clear positive correlation between temperature, humidity, and mass loss seen at both the positive and negative extremes of mass anomaly, suggesting that the spherical harmonic basis of the GRACE data captures peaks of mass anomaly even when they are relatively close together (Figure~\ref{fig:comparisontotal}). Mass loss extremes on Greenland are located just over $400$km away from each other, nearing the limit of GRACE resolution, and transitions between those areas may be biased by those extremes.
 
-Regions between the strong mass loss of the lower ice sheet and mass gain in the accumulation zone may be poorly resolved, and not accurately reflect local melt. This explanation is directly supported by the clear positive correlation between temperature, humidity, and mass loss seen at both the positive and negative extremes of mass anomaly, suggesting that the spherical harmonic basis of the GRACE data captures peaks of mass anomaly even when they are relatively close together (Figure\ref{fig:comparisontotal}). Mass loss extremes on Greenland are located just over $400$km away from each other, nearing the limit of GRACE resolution, and transitions between those areas may be biased by those extremes.
-
-Complicating the spatial limitations of GRACE are the dimensions of the ice sheet itself. The steeper eastern slopes of the ice sheet have less melt for a given temperature anomaly, simply due to the distribution of the low altitude ablation zone in those regions \cite[][]{bevis2019}. As a result, the short-distance gradient in mass anomaly captured by GRACE is not as extreme on the eastern half of the ice sheet as it is on the western half, where a larger distribution of low altitude ice in the ablation zone is exposed temperature fluctuations. If GRACE may struggle to accurately resolve regions which fall in between very close extrema of mass anomaly (distances which approach the satellites' fundamental spatial resolution), we would expect the NE quadrant to have the clearest spatial correlation with temperature, which we do in fact observe (Figure\ref{fig:comparisonregional}).
+Complicating the spatial limitations of GRACE are the dimensions of the ice sheet itself. The steeper eastern slopes of the ice sheet have less melt for a given temperature anomaly, simply due to the distribution of the low altitude ablation zone in those regions \cite[][]{bevis2019}. As a result, the short-distance gradient in mass anomaly captured by GRACE is not as extreme on the eastern half of the ice sheet as it is on the western half, where a larger distribution of low altitude ice in the ablation zone is exposed temperature fluctuations. If GRACE may struggle to accurately resolve regions which fall in between very close extrema of mass anomaly (distances which approach the satellites' fundamental spatial resolution), we would expect the NE quadrant to have the clearest spatial correlation with temperature, which we do in fact observe (Figure~\ref{fig:comparisonregions}).
 
 Another factor at play in the connection between total mass lost and mean temperature over a 14 year period is inter-annual variability. Taking a mean temperature over such a timescale obscures short periods of intense melting, which may have a significant contribution to total melt.
 
-Additionally, while temperature and humidity contribute to melting ice, the redistribution of mass after ice is melted can differ depending on local conditions, and may flow relatively directly off of the ice sheet, or get stored within the snowpack or refrozen, conditions which themselves have changed dramatically over the GRACE observation period \cite[][]{angelen2014,pena2015}. 
+Additionally, while temperature and humidity contribute to melting ice, the redistribution of mass after ice is melted can differ depending on local conditions, and may flow relatively directly off of the ice sheet, or get stored within the snowpack or refrozen, conditions which themselves have changed dramatically over the GRACE observation period \cite[][]{angelen2014,pena2015}.
 
+\subsection{Concentration of melt in the SW}
 
-
-
-%% WHAT FACTORS AFFECT??
-"Greenland Ice Sheet Surface Melt and Its Relation to Daily Atmospheric Conditions"
+The change in temperature anomaly tendency in the years just before and after 2012 aligns with similar patterns seen observed in atmospheric river tendencies, which focused more on the SW region prior to 2012, and more on the northern regions in following years \cite[][]{mattingly2018}. While it is unsurprising that warm air and moist air go hand in hand, a similar pattern in net short-wave radiation and microwave-derived melt days was also observed in the years leading up to 2012 \cite[][]{angelen2014}. The connection between air temperature, moisture, and radiation balance suggests that warm, moist air may enhance insolation driven melt not only by raising the baseline temperature of the ice surface, but by changing surface albedo and allowing greater absorption of insolation as suggested by \cite[][]{box2012}.
+%
+%%% WHAT FACTORS AFFECT??
+%"Greenland Ice Sheet Surface Melt and Its Relation to Daily Atmospheric Conditions"
 
 %% is Greenland warming?
-\subsection{Greenland is melting, is it warming?}
-The melting of the Greenland Ice Sheet is strongly connected to warming temperatures in much of the literature, and the significant repercussions of various short-term warming scenarios on the evolution of ice sheet melting are of great importance to predicting sea-level rise over the next century \cite[][]{hahn2018,pattyn2018,ruckamp2018}. To best understand the relationship between warming temperatures and Greenland melt, some caution must be used in drawing a direct line between increasing mean global surface temperatures and increases of melt on the Greenland ice sheet. 
-
-Between the late 1990's and 2012, an apparent pause in the rise of mean global temperatures coincided with the strongest acceleration in Greenland ice sheet mass loss of the last century \cite[][]{kosaka2013,angelen2014,bevis2019}. The ``hiatus'' observed in global warming over the first decade of the 21st century has been correlated with natural climate variability such as the El Ni\~{n}o/Southern Oscillation (ENSO), with heat being stored in cooler La Ni\~{n}a ocean waters \cite[][]{kosaka2013}. Between 2012 and 2017, mean global temperatures resumed a strong upwards trend driven by a negative to positive shift in ENSO phase (see Fig.~\ref{fig:ENSO}).
-
-\begin{figure}[h]
-\centering
-\makebox[\textwidth][c]{\includegraphics[height=0.5\textheight]
-{/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/ENSO_TEMP.png}}
-\caption[]{} \label{fig:ENSO}
-\end{figure}
-
-Over the same period, mean Greenland Ice Sheet near-surface temperature did not rise significantly, and in fact was decreasing slightly across almost the entire ice sheet between 2003 and 2017 \cite[see Figs.~\ref{fig:ENSO}~\&~\ref{fig:Tslope}, and ][]{hearty2018, westergaard2018,reeves2017}. Mean temperatures over Greenland are expected to continue to rise with global temperatures into the future, but have not done so significantly since the 1990's \cite[][]{reeves2017}. 
-
-In interpreting the record of Greenland Ice Sheet mass wasting, it is important to note that the linear trend observed over the entire 2003--2017 GRACE record need not be driven by changing climate over that time period. Warming mean temperatures over Greenland in the 1990's drove the ice sheet into the linear decline we have seen in the GRACE record, with an approximately constant amount of summer loss each year \cite[][]{getraerFall}. Over that time period, anomalous years and accelerations in melt are likely due to variability in weather patterns across Greenland and the North Atlantic, and not regional or global warming \cite[][]{bevis2019,hahn2018}.
 
 
-\begin{figure}[h]
-\centering
-\makebox[\textwidth][c]{\includegraphics[height=0.5\textheight]
-{/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/Tslope.png}}
-\caption[]{} \label{fig:Tslope}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	CONCLUSION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+The melting of the Greenland Ice Sheet is strongly connected to warming temperatures in much of the literature, and the significant repercussions of various short-term warming scenarios on the evolution of ice sheet melting are of great importance to predicting sea-level rise over the next century \cite[][]{hahn2018,pattyn2018,ruckamp2018}. To best understand the relationship between warming temperatures and Greenland melt, some caution must be used in drawing a direct line between increasing mean global surface temperatures and increases of melt on the Greenland Ice Sheet, as temperature on the Greenland Ice Sheet has not risen in the same pattern as the broader Northern Hemisphere (see Figure~\ref{fig:climatewarming}. 
 
+Between the late 1990's and 2012, an apparent pause in the rise of mean global temperatures coincided with the strongest acceleration in Greenland Ice Sheet mass loss of the last century, a ``hiatus'' observed in global warming over the first decade of the 21st century that has been correlated with natural climate variability such as the El Ni\~{n}o/Southern Oscillation \cite[][]{kosaka2013,angelen2014,bevis2019}. Between 2012 and 2017, mean global temperatures resumed a strong upwards trend driven by a negative to positive shift in ENSO phase.
+
+%\begin{figure}[h]
+%\centering
+%\makebox[\textwidth][c]{\includegraphics[height=0.5\textheight]
+%{/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/ENSO_TEMP.png}}
+%\caption[]{} \label{fig:ENSO}
+%\end{figure}
+
+Over the same period, mean Greenland Ice Sheet near-surface temperature did not rise significantly, and in fact was decreasing slightly on average between 2003 and 2017 \cite[see Figs.~\ref{fig:seasonalclimate}~\&~\ref{fig:tslopes}, and ][]{hearty2018, westergaard2018,reeves2017}. Mean temperatures over Greenland are expected to continue to rise with global temperatures into the future, but have not done so significantly since the 1990's \cite[][]{reeves2017}, even with the return of Northern Hemisphere warming.
+
+In interpreting the record of Greenland Ice Sheet mass wasting, it is important to note that the linear trend observed over the entire 2003--2017 GRACE record (Figure~\ref{fig:Getraer}~B) need not be driven by changing climate over that time period. Warming mean temperatures over Greenland in the 1990's drove the ice sheet into the linear decline we have seen in the GRACE record, with an approximately constant amount of Summer loss each year \cite[][]{getraerFall}. Over that time period, anomalous years and temporary increased rates in melt are explained by variability in weather patterns across Greenland and the North Atlantic, including temporary regional warming trends \cite[see Figure~\ref{fig:tslopesSummer}][]{bevis2019,hahn2018}. It would appear that Greenland ice loss may remain in linear decline affected by natural variability until a period of sustained significant warming occurs, such as was seen in the 1990's.
+
+
+
+
+%\begin{figure}[h]
+%\centering
+%\makebox[\textwidth][c]{\includegraphics[height=0.5\textheight]
+%{/Users/benjamingetraer/Documents/IndependentWork/senior-thesis/figures/spring2019/Tslope.png}}
+%\caption[]{} \label{fig:Tslope}
+%\end{figure}
+%
 %% using the NAO
-\subsection{NAO Correlation with Melt}
-Often times when comparing the NAO to Greenland melt, monthly or seasonal means are used to correlate with melt events that occur over time scales of a few days \cite[see, for example, ][]{mattingly2018, bevis2019, angelen2014}. These averaged NAO index values are used despite the fact that daily and sub-daily solutions are readily available for the NAO index, and despite the fact that the physical atmospheric drivers of melting (such as temperature, cloud cover, etc.) are changing on a daily, not monthly, basis, and are interacting directly with atmospheric pressure \cite[for example,][]{mattingly2018}. 
+%\subsection{NAO Correlation with Melt}
+%Often times when comparing the NAO to Greenland melt, monthly or seasonal means are used to correlate with melt events that occur over time scales of a few days \cite[see, for example, ][]{mattingly2018, bevis2019, angelen2014}. These averaged NAO index values are used despite the fact that daily and sub-daily solutions are readily available for the NAO index, and despite the fact that the physical atmospheric drivers of melting (such as temperature, cloud cover, etc.) are changing on a daily, not monthly, basis, and are interacting directly with atmospheric pressure \cite[for example,][]{mattingly2018}. 
 
 
 
 \clearpage
 
 \input{Endmatter/datasources}
+
+\clearpage
+
+\input{Endmatter/sphericalharmonics}
 
 
 %--References
